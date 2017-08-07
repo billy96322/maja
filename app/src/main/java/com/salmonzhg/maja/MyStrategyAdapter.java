@@ -1,13 +1,16 @@
-package com.salmonzhg.maja.core;
+package com.salmonzhg.maja;
+
+import com.salmonzhg.maja.core.StrategyAdapter;
 
 /**
  * author: Salmon
- * date: 2017-08-04 15:00
+ * date: 2017-08-07 15:57
  * github: https://github.com/billy96322
  * email: salmonzhg@foxmail.com
  */
 
-public class DefaultStrategyAdapter extends StrategyAdapter {
+public class MyStrategyAdapter extends StrategyAdapter {
+
     @Override
     public byte toByte(byte[] data, int index) {
         return 0;

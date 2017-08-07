@@ -1,4 +1,4 @@
-# Maja
+# Maja [![](https://jitpack.io/v/billy96322/maja.svg)](https://jitpack.io/#billy96322/maja)
 
 Protobuf, Flatbuffers都是非常优秀的序列化库，但是因为历史原因或是考虑到终端性能问题，许多项目任然使用私有的协议。当我们需要序列化和反序列化的时候，
 经常需要写类似下面这样的代码。

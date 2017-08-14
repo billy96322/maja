@@ -42,6 +42,7 @@ public class DispatcherGenerator implements Generator {
 
         JavaFile.builder(PACKAGE_NAME, TypeSpec.classBuilder(MAJA_SERIALIZER_NAME)
                 .superclass(BaseDispatcher.class)
+                .addModifiers(Modifier.PUBLIC)
                 .addMethod(constructorSpec())
                 .addField(singleInstanceFieldSpec())
                 .addMethod(singleInstanceMethodSpec())

@@ -15,7 +15,7 @@ public class Utils {
     public static final GeneratorInfo resolveGeneratorInfo(Elements elementUtilS, Element enclosingElement) {
         String canonicalName = enclosingElement.asType().toString();
         String simpleCanonicalName = enclosingElement.getSimpleName().toString();
-        String packagePath = elementUtilS.getPackageOf(enclosingElement).toString();
+        String packagePath = elementUtilS.getPackageOf(enclosingElement).getQualifiedName().toString();
 
         GeneratorInfo info = new GeneratorInfo();
 

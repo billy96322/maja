@@ -114,8 +114,8 @@ allprojects {
 ``` gradle
 dependencies {
 
-        compile 'com.github.billy96322.maja:core:0.0.3'
+        compile 'com.github.billy96322.maja:core:x.y.z'
         
-        annotationProcessor 'com.github.billy96322.maja:processor:0.0.3'
-        // or apt 'com.github.billy96322.maja:processor:0.0.3'
+        annotationProcessor 'com.github.billy96322.maja:processor:x.y.z'
+        // or apt 'com.github.billy96322.maja:processor:x.y.z'
 }

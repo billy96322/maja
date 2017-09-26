@@ -18,6 +18,7 @@ import java.io.IOException;
  */
 @AutoService(Processor.class)
 public class MajaProcessor extends BasicAnnotationProcessor {
+    private boolean hasGenerated = false;
     private DispatcherGenerator mainGenerator = new DispatcherGenerator();
 
     @Override
@@ -30,13 +31,14 @@ public class MajaProcessor extends BasicAnnotationProcessor {
     @Override
     protected void postRound(RoundEnvironment roundEnv) {
         super.postRound(roundEnv);
-        if (mainGenerator != null)
+        if (!hasGenerated && mainGenerator != null) {
             try {
                 mainGenerator.generate(processingEnv);
+                hasGenerated = true;
             } catch (IOException e) {
                 e.printStackTrace();
             }
-//        CodeGenerator.generate(new ArrayList<Generator>(generatorMap.values()), processingEnv);
+        }
     }
 
     @Override
